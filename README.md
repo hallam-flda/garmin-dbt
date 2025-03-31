@@ -16,9 +16,9 @@ Heavier reshaping of the data and bringing in some key metrics that will be used
 
 Three fact tables are created, these are used to plot data in my [kepler map](https://hallam-flda.github.io/garmin_map/)
 
-fct_activity_log
-fct_activity_log_cond
-fct_travel_log
+- fct_activity_log
+- fct_activity_log_cond
+- fct_travel_log
 
 
 
