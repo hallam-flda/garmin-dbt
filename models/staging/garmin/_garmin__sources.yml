@@ -2,8 +2,27 @@ version: 2
 
 sources:
   - name: garmin
+    description: Export using fitfiles from .fit files sent by GarminConnect
     database: tonal-run-447413-c0     # BigQuery project name
     schema: garmin               # BigQuery dataset name
     tables:
       - name: activities         # BigQuery table name
         description: "Raw activity data from Garmin"
+        # WILL BE USEFUL LATER
+        # loaded_at_field: _etl_loaded_at
+        # freshness:
+        #   warn_after: {count: 3, period: day}
+        columns:
+          - name: timestamp
+            tests:
+              - unique
+              - not_null
+            description: primary key for export of .fit files
+          - name: position_lat
+            tests:
+              - not_null:
+                  severity: warn
+          - name: position_long
+            tests:
+              - not_null:
+                  severity: warn

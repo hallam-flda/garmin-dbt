@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: stg_garmin_activities
+    description: "{{ doc('garmin_activities')}}"
     columns:
     - name: timestamp
+      description: primary_key
       tests:
         - unique
         - not_null
