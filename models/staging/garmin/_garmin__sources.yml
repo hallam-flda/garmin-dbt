@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: garmin
+    description: Export using fitfiles from .fit files sent by GarminConnect
     database: tonal-run-447413-c0     # BigQuery project name
     schema: garmin               # BigQuery dataset name
     tables:
@@ -16,6 +17,7 @@ sources:
             tests:
               - unique
               - not_null
+            description: primary key for export of .fit files
           - name: position_lat
             tests:
               - not_null:

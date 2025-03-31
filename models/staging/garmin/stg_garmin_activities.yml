@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_garmin_activities
-    description: One row per timestamp extraction (usually 1-3 seconds). An initial clean of the garmin data, removing nulls for position lat and position long
+    description: "{{ doc('garmin_activities')}}"
     columns:
     - name: timestamp
       description: primary_key
