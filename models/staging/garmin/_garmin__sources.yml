@@ -7,3 +7,20 @@ sources:
     tables:
       - name: activities         # BigQuery table name
         description: "Raw activity data from Garmin"
+        # WILL BE USEFUL LATER
+        # loaded_at_field: _etl_loaded_at
+        # freshness:
+        #   warn_after: {count: 3, period: day}
+        columns:
+          - name: timestamp
+            tests:
+              - unique
+              - not_null
+          - name: position_lat
+            tests:
+              - not_null:
+                  severity: warn
+          - name: position_long
+            tests:
+              - not_null:
+                  severity: warn
