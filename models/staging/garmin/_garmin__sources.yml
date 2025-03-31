@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: garmin
+    database: tonal-run-447413-c0     # BigQuery project name
+    schema: garmin               # BigQuery dataset name
+    tables:
+      - name: activities         # BigQuery table name
+        description: "Raw activity data from Garmin"
