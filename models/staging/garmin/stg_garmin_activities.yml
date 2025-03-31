@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_garmin_activities
+    columns:
+    - name: timestamp
+      tests:
+        - unique
+        - not_null
