@@ -46,7 +46,22 @@ with
         from condensed_rows
     )
 select
-    *,
+    activity_id,
+    heart_rate,
+    cadence,
+    altitude,
+    distance_km,
+    position_lat,
+    position_long,
+    round(end_distance_meters/1000,2) end_distance_km,
+    timestamp,
+    activity_duration_seconds,
+    activity_duration_minutes,
+    avg_speed_ms,
+    pace_mins_per_km,
+    max_timestamp,
+    lead_lat,
+    lead_long,
     st_distance(
         st_geogpoint(position_long, position_lat), st_geogpoint(lead_long, lead_lat)
     )
