@@ -1,0 +1,10 @@
+version: 2
+
+seeds:
+  - name: locations
+    description: a manual map of lat lon pairs to common run locations
+    columns:
+      - name: city
+        tests:
+          - unique
+          - not_null
