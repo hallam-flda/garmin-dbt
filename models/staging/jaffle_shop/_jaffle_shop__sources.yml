@@ -2,7 +2,10 @@ version: 2
 
 sources: 
   - name: jaffle_shop
-    database: raw
+    database: tonal-run-447413-c0 
+    schema: dbt_hcunningham
     tables:
       - name: customers
+        identifier: jaffle_shop_customers
       - name: orders
+        identifier: jaffle_shop_orders
