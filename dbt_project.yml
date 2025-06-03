@@ -37,10 +37,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   garmin_kepler_map:
-    # Applies to all files under models/example/
+    # everything in models/marts will be configured as table
     marts:
-      +materialized: table
+      +materialized: table # quick querying for analysts in BI tools
+    # everything in models/staging will be configured as a view
     staging:
-      +materialized: view
+      +materialized: view # will get freshest data
 
 

@@ -2,8 +2,8 @@ version: 2
 
 sources: 
   - name: stripe
-    database: tonal-run-447413-c0 
+    database: tonal-run-447413-c0
     schema: dbt_hcunningham
     tables:
       - name: payments
-        identifier: stripe_payments  
+        identifier: stripe_payments
